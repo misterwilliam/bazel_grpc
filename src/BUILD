@@ -1,5 +1,10 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
+proto_library(
+    name = "simple_proto",
+    srcs = ["simple.proto"],
+)
+
 go_binary(
     name = "main",
     srcs = ["main.go"],
