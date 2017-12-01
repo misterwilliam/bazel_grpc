@@ -2,4 +2,8 @@ syntax = "proto3";
 
 package simple;
 
-message Foo {}
+option go_package = "github.com/misterwilliam/bazel_grpc/simple";
+
+message Foo {
+  string blob = 1;
+}

@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	pb "github.com/misterwilliam/bazel_grpc/simple"
+)
 
 func main() {
-	fmt.Println("hi")
+	fmt.Println(&pb.Foo{Blob: "hi"})
 }
