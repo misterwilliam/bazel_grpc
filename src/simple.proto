@@ -7,3 +7,9 @@ option go_package = "github.com/misterwilliam/bazel_grpc/simple";
 message Foo {
   string blob = 1;
 }
+
+message GetReq {}
+
+service MyService {
+  rpc GetFoo(GetReq) returns (Foo);
+}
