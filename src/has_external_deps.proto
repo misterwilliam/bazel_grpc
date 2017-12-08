@@ -2,12 +2,11 @@ syntax = "proto3";
 
 package has_external_deps;
 
-option go_package = "github.com/misterwilliam/bazel_grpc/src/has_external_dep";
+option go_package = "github.com/misterwilliam/bazel_grpc/src/has_external_deps";
 
 import "google/protobuf/duration.proto";
 
-message VeryUseful {
+message Foo {
   string very = 1;
-  int32 useful = 2;
   google.protobuf.Duration timing = 3;
 }

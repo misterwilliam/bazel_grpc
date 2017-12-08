@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package has_external_deps_grpc;
+
+option go_package = "github.com/misterwilliam/bazel_grpc/src/has_external_deps_grpc";
+
+import "google/api/annotations.proto";
+
+message Foo {
+  string blah = 1;
+}
+
+service HasAnnotation {
+  rpc Annotated(Foo) returns (Foo);
+}
