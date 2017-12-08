@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package very.useful;
+package has_external_deps;
 
-option go_package = "github.com/bazelbuild/rules_go/examples/proto/dep";
+option go_package = "github.com/misterwilliam/bazel_grpc/src/has_external_dep";
 
 import "google/protobuf/duration.proto";
 
