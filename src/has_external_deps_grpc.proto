@@ -11,5 +11,10 @@ message Foo {
 }
 
 service HasAnnotation {
-  rpc Annotated(Foo) returns (Foo);
+  rpc Annotated(Foo) returns (Foo) {
+    option (google.api.http) = {
+      post: "/v2/discovery:clusters"
+      body: "*"
+    };
+  };
 }
