@@ -5,6 +5,8 @@ import (
 	"log"
 	"net"
 
+	"no_go_package"
+
 	pb "github.com/misterwilliam/bazel_grpc/simple"
 	pb2 "github.com/misterwilliam/bazel_grpc/src/has_external_deps"
 	pb3 "github.com/misterwilliam/bazel_grpc/src/has_external_deps_grpc"
@@ -25,6 +27,9 @@ func (s *server) Annotated(ctx context.Context, req *pb3.Foo) (*pb3.Foo, error) 
 func main() {
 	fmt.Println(&pb.Foo{Blob: "hi"})
 	fmt.Println(&pb2.Foo{Very: "hi"})
+
+	fmt.Println(no_go_package.Foo{Blob: "yes"})
+
 	lis, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatalf("Listen failed")

@@ -49,6 +49,19 @@ go_proto_library(
   ],
 )
 
+proto_library(
+    name = "no_go_package_proto",
+    srcs = ["no_go_package.proto"],
+    visibility = ["//visibility:public"],
+)
+
+go_proto_library(
+    name = "no_go_package_go_proto",
+    proto = ":no_go_package_proto",
+    importpath = "no_go_package",
+    visibility = ["//visibility:public"],
+)
+
 go_binary(
     name = "main",
     srcs = ["main.go"],
@@ -57,6 +70,7 @@ go_binary(
         ":simple_go_proto",
         ":has_external_deps_go_proto",
         ":has_external_deps_grpc_grpc_proto",
+        ":no_go_package_go_proto",
         "@org_golang_google_grpc//:go_default_library",
         "@org_golang_x_net//context:go_default_library",
     ],

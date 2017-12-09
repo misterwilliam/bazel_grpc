@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package no_go_package;
+
+message Foo {
+  string blob = 1;
+}
