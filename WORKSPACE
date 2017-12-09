@@ -8,10 +8,6 @@ load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_too
 go_rules_dependencies()
 go_register_toolchains()
 
-# Go proto and gRPC rules
-load("@io_bazel_rules_go//proto:def.bzl", "proto_register_toolchains")
-proto_register_toolchains()
-
 GOOGLEAPIS_SHA = "5c6df0cd18c6a429eab739fb711c27f6e1393366" # May 14, 2017
 new_http_archive(
         name = "googleapis",
