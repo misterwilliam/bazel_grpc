@@ -5,6 +5,7 @@ import (
 	"log"
 	"net"
 
+	"lib"
 	"no_go_package"
 
 	pb "github.com/misterwilliam/bazel_grpc/simple"
@@ -29,6 +30,8 @@ func main() {
 	fmt.Println(&pb2.Foo{Very: "hi"})
 
 	fmt.Println(no_go_package.Foo{Blob: "yes"})
+	fmt.Println(lib.Foo{Blob: "yes"})
+	//fmt.Println(lib.Bar{Blob: "yes"})
 
 	lis, err := net.Listen("tcp", ":8080")
 	if err != nil {
