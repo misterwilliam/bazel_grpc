@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package lib;
+
+message Foo {
+  string blob = 1;
+}
