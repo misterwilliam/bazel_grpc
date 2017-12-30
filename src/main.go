@@ -8,6 +8,7 @@ import (
 	"lib"
 	"no_go_package"
 
+  _ "github.com/misterwilliam/bazel_grpc/parent"
 	pb "github.com/misterwilliam/bazel_grpc/simple"
 	pb2 "github.com/misterwilliam/bazel_grpc/src/has_external_deps"
 	pb3 "github.com/misterwilliam/bazel_grpc/src/has_external_deps_grpc"
